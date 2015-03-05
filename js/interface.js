@@ -21,7 +21,7 @@ $(document).ready(function(){
     }).done(function(data) {
       $('.temperature').text(data.temp);
       $('img').attr('src', 'images/' + data.outlook + '.svg')
-      $( ".icon" ).removeClass().addClass("icon " + data.outlook);
+      $( ".icon" ).toggleClass().addClass("icon " + data.outlook);
     });
 
   });
